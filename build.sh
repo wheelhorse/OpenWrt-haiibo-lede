@@ -72,7 +72,7 @@ mkdir -p files/etc/uci-defaults
 
 # Attempt multi-thread, fallback to single-thread with verbose logging on failure
 set +e
-make -j$(nproc) V=sc || make -j1 || make -j1 V=s
+make -j$(nproc) || make -j1 V=s
 BUILD_STATUS=$?
 set -e
 
